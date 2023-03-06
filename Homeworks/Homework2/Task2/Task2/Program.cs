@@ -2,7 +2,9 @@
 string[] G2 = new string[] { "Rakida", "Razmena", "Borka", "Zorka", "Menka" };
 
 Console.Write("Enter student group(there are 1 and 2): ");
-int input = int.Parse(Console.ReadLine());
+string firstInput = Console.ReadLine();
+int input;
+bool success = int.TryParse(firstInput, out input);
 
 if (input == 1)
 {

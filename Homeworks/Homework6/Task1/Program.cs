@@ -1,4 +1,4 @@
-﻿Queue<int> numbersQueue = new Queue<int>();
+Queue<int> numbersQueue = new Queue<int>();
 bool continute = true;
 while (continute)
 {
@@ -7,8 +7,11 @@ while (continute)
     Console.WriteLine("Do you want to continue? Press 'Y' to continue or 'N' to cancel!");
     string userInput = Console.ReadLine().ToUpper();
     numbersQueue.Enqueue(numInput);
-    if (userInput == "N")
+    if (userInput == "Y")
     {
+        continue;
+    }
+    else if(userInput == "N") { 
         Console.Write("Showing numbers in the Queue: \n");
         foreach(int num in  numbersQueue) 
         {
@@ -16,5 +19,9 @@ while (continute)
         }
         
         break;
+    }else
+    {
+        Console.WriteLine("Invalid input");
     }
+
 }
